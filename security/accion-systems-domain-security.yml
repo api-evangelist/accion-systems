@@ -1,0 +1,16 @@
+generated: '2026-07-17'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: www.accion-systems.com
+  https: false
+domains:
+- domain: accion-systems.com
+  dnssec: false
+  caa:
+  - 0 issuewild "digicert.com"
+  - 0 issue "digicert.com"
+  - 0 issue "letsencrypt.org"
+  spf: true
+  dmarc: true
+  dmarc_policy: none
